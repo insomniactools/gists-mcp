@@ -1,3 +1,5 @@
+[![smithery badge](https://smithery.ai/badge/@insomniactools/github-gists)](https://smithery.ai/server/@insomniactools/github-gists)
+
 # 🚀 Gists MCP Server - Your AI's Code Memory!
 
 > **Transform GitHub Gists into your AI assistant's personal code snippet library!** 🧠💾 (this readme totally wasn't written by Claude 😂)
