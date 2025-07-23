@@ -1,5 +1,7 @@
 # 🚀 Gists MCP Server - Your AI's Code Memory!
 
+[![smithery badge](https://smithery.ai/badge/@insomniactools/github-gists)](https://smithery.ai/server/@insomniactools/github-gists)
+
 > **Transform GitHub Gists into your AI assistant's personal code snippet library!** 🧠💾 (this readme totally wasn't written by Claude 😂)
 
 Ever found yourself searching through GitHub repos and thinking "Wow, this code is gold!" only to lose it in your browser history? Or maybe you're tired of copy-pasting code between ChatGPT sessions? 
@@ -45,6 +47,14 @@ Imagine this workflow:
 - **Fork Gists**: Build upon others' great ideas
 
 ## 🚀 Quick Start
+
+### Installing via Smithery
+
+To install github-gists for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@insomniactools/github-gists):
+
+```bash
+npx -y @smithery/cli install @insomniactools/github-gists --client claude
+```
 
 ### Prerequisites
 
