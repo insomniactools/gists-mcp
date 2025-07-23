@@ -1,4 +1,4 @@
-# 🚀 Gists MCP Server - Your AI's Code Memory!
+# 🚀 Gists MCP Server - Your AI's Code Memory! (this readme totally wasn't written by Claude 😂)
 
 > **Transform GitHub Gists into your AI assistant's personal code snippet library!** 🧠💾
 
