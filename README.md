@@ -1,58 +1,91 @@
-# Gists MCP Server
+# 🚀 Gists MCP Server - Your AI's Code Memory!
 
-An MCP (Model Context Protocol) server that enables Claude to manage GitHub Gists. Create, read, update, and delete gists directly from your Claude conversations.
+> **Transform GitHub Gists into your AI assistant's personal code snippet library!** 🧠💾
+
+Ever found yourself searching through GitHub repos and thinking "Wow, this code is gold!" only to lose it in your browser history? Or maybe you're tired of copy-pasting code between ChatGPT sessions? 
+
+**Welcome to the future of AI-assisted development!** 🎉
+
+## 🌟 What Makes This Special?
+
+This MCP server turns Claude into your **intelligent code librarian** who can:
+- 📥 **Save brilliant code** you discover anywhere on GitHub directly to YOUR gists
+- 🔍 **Instantly retrieve** that authentication implementation you saved 3 months ago
+- 📝 **Update and refine** your code collection as you learn better patterns
+- 🗂️ **Organize snippets** with descriptive names that make sense to both you AND your AI
+- 🔐 **Keep sensitive code private** or share useful utilities publicly
+- 🚫 **No more local file clutter** - everything lives in the cloud!
+
+## 💡 Real-World Magic
+
+Imagine this workflow:
+1. **You**: "Claude, search GitHub for the best React authentication patterns"
+2. **Claude**: *finds amazing implementations*
+3. **You**: "Save that JWT refresh token logic as a gist!"
+4. **Claude**: *creates a perfectly organized gist with the code*
+5. **Future You**: "Remember that auth code we saved?"
+6. **Claude**: *instantly retrieves YOUR curated code*
+
+## 🎯 Perfect For:
+
+- **🔧 Developers** building their personal utility library
+- **📚 Learners** collecting examples of best practices
+- **🏢 Teams** sharing code patterns across projects
+- **🎨 Creators** saving creative coding experiments
+- **🛠️ DevOps** storing configuration snippets and scripts
 
 ## Features
 
-- **List Gists**: View all your gists or public gists
-- **Create Gists**: Create new gists with multiple files
-- **Get Gist Details**: Retrieve specific gist information
-- **Update Gists**: Modify existing gists
-- **Delete Gists**: Remove gists you no longer need
-- **Star/Unstar**: Manage starred gists
-- **Fork Gists**: Fork other users' gists
+- **List Gists**: View all your gists or explore public gists
+- **Create Gists**: Save code with multiple files in one gist
+- **Get Gist Details**: Retrieve any gist with full content
+- **Update Gists**: Evolve your code as you learn
+- **Delete Gists**: Clean up outdated snippets
+- **Star/Unstar**: Bookmark the best of the best
+- **Fork Gists**: Build upon others' great ideas
 
-## Installation
+## 🚀 Quick Start
 
 ### Prerequisites
 
 - Node.js 18 or higher
 - A GitHub Personal Access Token with `gist` scope
+- Claude Desktop or Claude CLI
 
-### Setup
+### Setup in 3 Minutes
 
-1. Clone this repository:
+1. **Clone the magic**:
 ```bash
 git clone https://github.com/insomniactools/gists-mcp.git
 cd gists-mcp
 ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 ```bash
 npm install
 ```
 
-3. Build the project:
+3. **Build it**:
 ```bash
 npm run build
 ```
 
-4. Create a GitHub Personal Access Token:
+4. **Get your GitHub token**:
    - Go to GitHub Settings → Developer settings → Personal access tokens → Tokens (classic)
    - Click "Generate new token (classic)"
-   - Give it a descriptive name
+   - Name it something cool like "Claude's Code Memory"
    - Select the `gist` scope
    - Click "Generate token"
-   - Copy the token (you won't be able to see it again!)
+   - Copy the token (save it somewhere safe!)
 
-## Configuration
+## ⚙️ Configuration
 
-### Option 1: Using Claude Desktop App
+### Option 1: Claude Desktop App
 
-Add the server to your Claude Desktop configuration:
+Add to your Claude Desktop configuration:
 
-**On macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-**On Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+**macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+**Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 
 ```json
 {
@@ -68,34 +101,27 @@ Add the server to your Claude Desktop configuration:
 }
 ```
 
-### Option 2: Using Claude CLI
+### Option 2: Claude CLI (Global Install)
 
-```bash
-claude mcp add gists \
-  -e GITHUB_TOKEN=your-github-token-here \
-  -- node /absolute/path/to/gists-mcp/dist/index.js
-```
-
-For global availability across all Claude sessions:
 ```bash
 claude mcp add gists -s user \
   -e GITHUB_TOKEN=your-github-token-here \
   -- node /absolute/path/to/gists-mcp/dist/index.js
 ```
 
-## Usage Examples
+## 🎮 Usage Examples
 
-Once configured, you can ask Claude to:
+Once connected, just talk to Claude naturally:
 
-- "List my gists"
-- "Create a new gist with a Python hello world script"
-- "Get the content of gist [gist-id]"
-- "Update my gist to add error handling"
-- "Delete the test gist I created earlier"
-- "Show me the most recent public gists"
-- "Star that useful gist we found"
+- 🔍 "Show me all my gists"
+- ✨ "Create a gist with that amazing debounce function we just found"
+- 📖 "Get my authentication utilities gist"
+- 🔄 "Update the API client gist with better error handling"
+- 🗑️ "Delete that old test gist"
+- ⭐ "Star this brilliant algorithm we discovered"
+- 🔀 "Fork that awesome utility collection"
 
-## Development
+## 🛠️ Development
 
 ```bash
 # Install dependencies
@@ -104,54 +130,56 @@ npm install
 # Build the project
 npm run build
 
-# Run in development mode with auto-rebuild
+# Development mode with hot reload
 npm run dev
 
 # Run tests
 npm test
 
-# Lint code
+# Lint & format
 npm run lint
-
-# Format code
 npm run format
 ```
 
-## API Functions
+## 📚 API Functions
 
-### Core Functions
-- `list_gists` - List gists (user's or public)
-- `get_gist` - Get a specific gist by ID
-- `create_gist` - Create a new gist
-- `update_gist` - Update an existing gist
-- `delete_gist` - Delete a gist
+### Core Magic
+- `list_gists` - Browse your code collection
+- `get_gist` - Retrieve specific snippets
+- `create_gist` - Save new discoveries
+- `update_gist` - Improve existing code
+- `delete_gist` - Clean up your library
 
-### Additional Functions
-- `list_public_gists` - List all public gists
-- `list_starred_gists` - List starred gists
-- `star_gist` - Star a gist
-- `unstar_gist` - Unstar a gist
-- `fork_gist` - Fork a gist
+### Extra Powers
+- `list_public_gists` - Explore the community
+- `list_starred_gists` - Your favorites collection
+- `star_gist` - Bookmark the best
+- `unstar_gist` - Update your bookmarks
+- `fork_gist` - Build on others' work
 
-## Troubleshooting
+## 🐛 Troubleshooting
 
-### Server not connecting
-1. Ensure your GitHub token has the `gist` scope
-2. Check that the path to `index.js` is absolute
-3. Verify Node.js is installed and accessible
+### Connection Issues?
+1. Double-check your GitHub token has `gist` scope
+2. Ensure the path to `index.js` is absolute
+3. Verify Node.js 18+ is installed
 
-### Permission errors
-- Make sure your token is valid and not expired
-- Ensure you have permissions for the gists you're trying to access
+### Permission Denied?
+- Token might be expired - generate a new one
+- Ensure you own the gists you're trying to modify
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Have ideas to make this even better? PRs are welcome! Let's build the ultimate AI code memory together!
 
-## License
+## 📜 License
 
 MIT License - see LICENSE file for details
 
-## Acknowledgments
+## 🙏 Acknowledgments
 
-Built for use with [Anthropic's Model Context Protocol (MCP)](https://modelcontextprotocol.io/)
+Built with ❤️ for the [Anthropic Model Context Protocol (MCP)](https://modelcontextprotocol.io/) ecosystem
+
+---
+
+**Ready to give your AI perfect memory for code?** Clone this repo and start building your personal code library today! 🚀
