@@ -1,6 +1,8 @@
 # 🚀 Gists MCP Server - Your AI's Code Memory!
 
-> **Transform GitHub Gists into your AI assistant's personal code snippet library!** 🧠💾 (this readme totally wasn't written by Claude 😂)
+> **Transform GitHub Gists into your AI assistant's personal code snippet library!** 🧠💾 
+
+(this readme totally wasn't written by Claude 😂)
 
 Ever found yourself searching through GitHub repos and thinking "Wow, this code is gold!" only to lose it in your browser history? Or maybe you're tired of copy-pasting code between ChatGPT sessions? 
 
